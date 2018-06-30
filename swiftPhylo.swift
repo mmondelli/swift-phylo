@@ -3,24 +3,24 @@ type file;
 #string ortho[];
 
 file fasta[] <filesys_mapper; pattern="ORTHO*">;
-file fastaNumbered[] <simple_mapper;suffix=".fastaNumbered">;	
-file mafft[] <simple_mapper; suffix=".mafft">;
-file phylip[] <simple_mapper; suffix=".phylip">;
-file mg[] <simple_mapper; suffix=".mg">;
+file fastaNumbered[] <simple_mapper; prefix="intermediate_files/", suffix=".fastaNumbered">;	
+file mafft[] <simple_mapper; prefix="intermediate_files/", suffix=".mafft">;
+file phylip[] <simple_mapper; prefix="results/", suffix=".phylip">;
+file mg[] <simple_mapper; prefix="results/", suffix=".mg">;
 
-file mfMG[] <simple_mapper; suffix=".mg.modelFromMG.txt">;
-file modelMGBateRaxml[] <simple_mapper; suffix=".phylip.modelMGBateRaxml.txt">;
+file mfMG[] <simple_mapper; prefix="results/", suffix=".mg.modelFromMG.txt">;
+file modelMGBateRaxml[] <simple_mapper; prefix="intermediate_files/", suffix=".phylip.modelMGBateRaxml.txt">;
 
-file r1[] <simple_mapper; prefix="RAxML_bestTree.", suffix=".phylip_raxml_tree1.singleTree">;
-file r2[] <simple_mapper; prefix="RAxML_bipartitionsBranchLabels.", suffix=".phylip_tree3.BS_TREE">;
-file r3[] <simple_mapper; prefix="RAxML_bipartitions.", suffix=".phylip_tree3.BS_TREE">;
-file r4[] <simple_mapper; prefix="RAxML_bootstrap.", suffix=".phylip_tree2.raxml">;
-file r5[] <simple_mapper; prefix="RAxML_info.", suffix=".phylip_raxml_tree1.singleTree">;
-file r6[] <simple_mapper; prefix="RAxML_info.", suffix=".phylip_tree2.raxml">;
-file r7[] <simple_mapper; prefix="RAxML_info.", suffix=".phylip_tree3.BS_TREE">;
-file r8[] <simple_mapper; prefix="RAxML_log.", suffix=".phylip_raxml_tree1.singleTree">;
-file r9[] <simple_mapper; prefix="RAxML_parsimonyTree.", suffix=".phylip_raxml_tree1.singleTree">;
-file r10[] <simple_mapper; prefix="RAxML_result.", suffix=".phylip_raxml_tree1.singleTree">;
+file r1[] <simple_mapper; prefix="results/RAxML_bestTree.", suffix=".phylip_raxml_tree1.singleTree">;
+file r2[] <simple_mapper; prefix="results/RAxML_bipartitionsBranchLabels.", suffix=".phylip_tree3.BS_TREE">;
+file r3[] <simple_mapper; prefix="results/RAxML_bipartitions.", suffix=".phylip_tree3.BS_TREE">;
+file r4[] <simple_mapper; prefix="results/RAxML_bootstrap.", suffix=".phylip_tree2.raxml">;
+file r5[] <simple_mapper; prefix="results/RAxML_info.", suffix=".phylip_raxml_tree1.singleTree">;
+file r6[] <simple_mapper; prefix="results/RAxML_info.", suffix=".phylip_tree2.raxml">;
+file r7[] <simple_mapper; prefix="results/RAxML_info.", suffix=".phylip_tree3.BS_TREE">;
+file r8[] <simple_mapper; prefix="results/RAxML_log.", suffix=".phylip_raxml_tree1.singleTree">;
+file r9[] <simple_mapper; prefix="results/RAxML_parsimonyTree.", suffix=".phylip_raxml_tree1.singleTree">;
+file r10[] <simple_mapper; prefix="results/RAxML_result.", suffix=".phylip_raxml_tree1.singleTree">;
 
 
 app (file o) fastanumbered (file f) 

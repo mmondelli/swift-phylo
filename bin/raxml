@@ -1,1 +1,4 @@
-./raxml.sh
+#!/bin/bash
+python ${SWIFT_PHYLO}/execute_raxml.py ./results $1 $2 2 4
+
+
